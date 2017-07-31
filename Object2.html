@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object2</title>
+</head>
+<body>
+<script>
+
+    function Developer(name, lastname,  age, sex,  country ){
+        this.name=name;
+        this.lastname=lastname;
+        this.age=age;
+        this.sex=sex;
+        this.country=country;
+    }
+    var BE_Developer=new Developer("Bill", "Ivanov", "55", "male", "Ukraine");
+    var color=["azure", "blanchedalmond", "gainsboro", "yellow", "beige", "darkseagreen", "steelblue"];
+    for(var key in BE_Developer) {
+        document.write("<div style='background-color:" + color[Math.round(Math.random() * (color.length))] + " ; width: 70%'>")
+        document.write("<p style='color: darkslategray;  font-family: cursive; text-align: center;'>" + key + " = " + BE_Developer[key] + "</p>");
+        document.write("</div>");
+    }
+    </script>
+
+</body>
+</html>

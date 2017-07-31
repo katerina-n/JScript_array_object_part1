@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+<script>
+    var a= prompt("Введите количество элементов в массиве");
+    var arr=[];
+    var nechetnue=[];
+for(var i=0; i<=a-1; i++){
+    arr[i]=Math.round(Math.random()*10+1);
+}
+    var str=arr.join(' ');
+    var min=Number.POSITIVE_INFINITY;
+    var max=Number.NEGATIVE_INFINITY;
+    var count=0;
+    var k=0;
+    for(var i=0; i<=arr.length-1; i++){
+        count=count+arr[i];
+        if(arr[i]<=min){
+            min=arr[i];
+        }
+        else{
+            if(arr[i]>=max){
+                max=arr[i];
+            }
+        }
+        if(arr[i]%2!=0){
+            nechetnue[k]=arr[i];
+            k++;
+        }
+    }
+    var mid=count/a;
+    var nStr=nechetnue.join(' ');
+
+    </script>
+<div style="width:30%; height: 40%; background-color: yellow;">
+    <p style="color: grey; font-family: cursive; text-align: center;">Вы ввели число <script>document.write(a)</script></p>
+
+</div>
+<div style="width:30%; height: 40%; background-color: blanchedalmond;">
+    <p style="color: grey; font-family: cursive; text-align: center;"><script>document.write(str)</script></p>
+</div>
+<div style="width:30%; height: 40%; background-color: darkseagreen;">
+    <p style="color: grey; font-family: cursive; text-align: center;">Максимальное значение- <script>document.write(max) </script> Минимальное значение- <script>document.write(min) </script> </p>
+</div>
+<div style="width:30%; height: 40%; background-color: gainsboro">
+    <p style="color: grey; font-family: cursive; text-align: center;">Сумма значений- <script>document.write(count)</script> <br>Cреднее арифметическое- <script>document.write(mid)</script></p>
+</div>
+<div style="width:30%; height: 40%; background-color: blanchedalmond;">
+    <p style="color: grey; font-family: cursive; text-align: center;">Нечетные значения- <script>document.write(nStr)</script></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays2</title>
+</head>
+<body>
+
+<script>
+
+    var arr=new Array();
+    var rand;
+    document.write("<table style='border: double; background-color: azure; border-color: steelblue ; width: 30% '>");
+    for(var i=0; i<=4; i++){
+        arr[i]=new Array();
+        document.write("<tr style='border: dashed;border-color: steelblue;'>");
+        for(var j=0; j<=4; j++){
+
+         if(Math.random()>0.5){
+             document.write("<td style='border: dashed;border-color: steelblue; width: 6%'>");
+             arr[i][j]=Math.round(Math.random()*(-10)+1);
+             document.write(arr[i][j]);
+             document.write("</td>");
+         }
+         else
+         { document.write("<td style='border: dashed;border-color: steelblue; width: 6%'>");
+             arr[i][j]=Math.round(Math.random()*10+1);
+             document.write(arr[i][j]);
+             document.write("</td>");
+         }
+        // document.write(arr[i][j]+" ");
+
+        }
+        document.write("</tr>");
+       //document.write("<br>");
+    }
+    document.write("</table>");
+   // document.write("<br>");
+    document.write("<table style='border: double; background-color: azure; border-color: steelblue;  width: 30% '>");
+    for(var k=0; k<=4; k++){
+        document.write("<tr style='border: dashed;border-color: steelblue;'>");
+        for(var l=0; l<=4; l++) {
+if((k==l)&&(arr[k][l]>0)){
+    arr[k][l]=1;
+}
+if((k==l)&&(arr[k][l]<0)){
+    arr[k][l]=0;
+}
+            document.write("<td style='border: dashed;border-color: steelblue; width: 6%'>");
+document.write(arr[k][l]+" ");
+document.write("</td>");
+        }
+        document.write("</tr>");
+        document.write("<br>");
+    }
+    document.write("</table>");
+    </script>
+</body>
+</html>

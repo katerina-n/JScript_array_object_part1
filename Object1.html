@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object1</title>
+</head>
+<body style="border: double; width: 50%";>
+<div style="position: absolute; left: 370px;"><img style="width: 19%" src="mario.jpg"></div>
+<script>
+
+var FEDeveloper={
+    name: "Nike",
+    secondName:"Petrov",
+    sex: "male",
+    age: "88",
+    country: "Ukraine",
+    job: "developer"
+};
+var color=["azure", "blanchedalmond", "gainsboro", "yellow", "beige", "darkseagreen", "steelblue"];
+for(var key in FEDeveloper) {
+    document.write("<div style='background-color:"+color[Math.round(Math.random()*(color.length))]+" ; width: 70%'>")
+    document.write("<p style='color: darkslategray;  font-family: cursive; text-align: center;'>"+key + " = " + FEDeveloper[key]+"</p>");
+    document.write("</div>");
+}
+</script>
+</body>
+</html>
